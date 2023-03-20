@@ -1,0 +1,129 @@
+@media only screen and (max-width: 768px) {
+/* responsive*/
+.headerPrincipal .container{
+     flex-direction: column;/* este reemplaza al diplay flex del de la compu
+      hizo que el menú se pusiera debajo del titulo Mini Alura*/
+      align-items: initial;/* antes estaba align-items: center;*/
+      text-align:center; 
+}
+/* con este queda un renglon debajo del otro*/
+.headerPrincipal-nav-link{
+    flex-direction:column; 
+ 
+}
+.headerPrincipal-nav-link.headerPrincipal-nav-link-app{
+        order:-1; 
+    /*si en el responsive quiero poner primero en el menú al item nuestra app,
+     se coloca order-1 ya que cero es home pero no me funciona ...ver https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+}
+.contenidoPrincipal-cursos{
+    flex-direction:column;
+}
+.contenidoPrincipal-cursos-link{
+     width: 100%;
+}
+.rodapePrincipal-navMap-list{
+    height:auto;   
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+}
+.rodapePrincipal-patrocinadores .container{
+    flex-direction:column;
+}
+.rodapePrincipal-patrocinadores-list{
+   /* del profe a mi no me queda asi
+    align-items:center;
+    width:100%;
+    margin: 0;
+    me queda como al profe con esto:*/
+    align-items:initial;
+    width:100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.rodapePrincipal-contactoForm{
+    
+}
+.rodapePrincipal-contactoForm-emailInput{   
+    justify-content: center;    
+}
+.headerPrincipal-nav-link-app{
+    order:-1; 
+/*si en el responsive quiero poner primero en el menú al item nuestra app,
+ se coloca order-1 ya que cero es home pero no me funciona ...
+ si lo pongo en el no responsive si funciona  ver https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+}
+.videoSobre .container{
+    flex-direction: column;
+}
+.videoSobre-sobre{
+    text-align: center;
+    display:flex;
+    flex-direction:column; /*el boton inscribase ya adoptó el ancho de la columna*/
+}
+}
+
+@media only screen and (min-width: 768px) {
+    
+ /*hace que se hagan tipo botoncito a la derecha los link de home etc*/
+.headerPrincipal .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.headerPrincipal-nav {
+	display: flex;
+}
+.rodapePrincipal-patrocinadores .container{/* Entre en contacto de abajo de todo se fue a la derecha*/
+     display:flex;
+     justify-content: space-between;
+}
+.rodapePrincipal-patrocinadores-list{ /* se alinearon los iconos de abajo de todo: alura, Caelum, casa de codigo*/
+    display: flex;
+	align-items: center;
+	justify-content: space-around; /* se logra espacio uniforme entre cada icono*/
+    width: 70%;
+    margin-right:5% ;
+}
+.rodapePrincipal-contactoForm{
+    width: 20%;
+}
+.rodapePrincipal-contactoForm-fieldset{
+    display: flex;
+}
+.rodapePrincipal-navMap-list{/*listado de footer en columna*/
+    display: flex;
+    flex-direction: column;
+    height: 255px;
+    flex-wrap: wrap; /*con esto lo puso horizontal*/
+}
+.contenidoPrincipal-cursos{
+    display: flex;
+    flex-wrap:wrap;
+}
+.contenidoPrincipal-cursos-link{
+    width:23%;
+}
+.videoSobre .container{
+    display: flex;
+}
+.videoSobre-sobre{
+    text-align: center;
+    display:flex;
+    flex-direction:column; /*el boton inscribase ya adoptó el ancho de la columna*/
+}
+.videoSobre-video{
+    flex-grow:2;/*Flex-grow va a tomar todo el espacio
+ que está sobrando de lado a lado y lo va a dividir en la
+  cantidad de secciones que yo le indique. Por ejemplo, en este caso va a tomar dos espacios y los va a dividir entre el espacio que está el video*/
+  flex-shrink: 2; /*este va a achicar cuando achiquemos la pantalla y se va a adaptar*/
+}
+.videoSobre-sobre-list{
+    flex-grow:2;/*colocamos aquí un flex-grow. Vamos a colocarle un 2. 
+¿Qué va a hacer ese flex-grow en este caso? Él va a crear de ese espacio que le estoy indicando,
+ de 2, va a crear dos partes y colocarlo entre los dos elementos, creando ese espacio entre el botón y el texto.*/
+}
+}

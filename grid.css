@@ -1,0 +1,31 @@
+.box {
+    height: 50px;
+    width: 80px;
+    background-color: green;
+    text-align: center;
+    margin-left:0.1%;
+    margin-right:0.1%;
+    margin-bottom: 0.1%;
+    margin-top: 0.1%;
+  }
+  
+  .grid{ /* queda horizontal*/
+    display: flex;
+    flex-wrap: wrap; /*con esto lo puso horizontal*/
+  }
+  /* sii lo puse bien!!
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  para ponerlos  en dos columnas el siguiente*/
+  .grid{
+    display: flex;
+    height: 125px; /* esto si es 250 quedan dos columnas  
+    cuanto mas chico es el largo del espacio en mas columnas se distribuyen los box, si lo quito quedan todos en horizontal */
+   /* justify-content: space-around; espacio entre cada box
+   justify-content: space-between;
+   estos dos no se usan en el grid poprque complica los expacios a la hora de usar F12 */
+    flex-direction: column;
+    flex-wrap: wrap; /*con esto lo puso horizontal*/
+  }

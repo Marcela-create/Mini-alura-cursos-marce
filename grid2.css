@@ -1,0 +1,9 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+.course {
+    width: 21.3%;/* SI CAMBIO EL ANCHO CAMBIO LA DISTRIBUCIÓN DE COLUMNAAS*/
+    margin: 1%;
+    background: magenta;
+  }

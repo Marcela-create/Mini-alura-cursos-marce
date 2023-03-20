@@ -1,0 +1,27 @@
+.cabecalho-nav {
+   display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+/* alineados horizontalmente en el centro
+.cabecalho {
+    display: flex;  
+  }
+  .menu-item{
+    list-style:none;
+    text-align: center; 
+  }
+  .logo{
+    margin-left: 45%;
+    text-align: center; 
+  }*/
+/* alineados verticalmente en el centro
+  .cabecalho {
+     display: block;
+    justify-content: space-between;
+     text-align: center;
+    
+}
+.menu-item{
+  list-style:none;
+ } */
